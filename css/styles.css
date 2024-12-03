@@ -1,0 +1,254 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #fde507
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 5px 0px 5px;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+nav {
+    border-bottom: 2px solid #bdaa07d3;
+    display: flex;
+    margin-left: 30px;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+nav a {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: color .3s ease;
+
+    &:hover {
+        color: white
+    }
+}
+
+.cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon img {
+    width: 40px;
+    /* Ajusta el tamaño según lo necesites */
+}
+
+.item-count {
+    position: absolute;
+    top: 33px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Product card styles */
+.product-card {
+    height: 400px;
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+    & img {
+        padding: 0;
+        margin: 0;
+        height: 200px;
+        /* Alto fijo */
+        width: 250px;
+        /* Ancho fijo */
+        object-fit: cover;
+        /* Ajusta la imagen manteniendo la relación de aspecto */
+        border-radius: 5px;
+        /* (Opcional) Le da bordes redondeados a la imagen */
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.container-cart {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    & button {
+        background-color: #e60023;
+        /* Color de fondo */
+        color: white;
+        /* Color del texto */
+        padding: 12px 24px;
+        /* Espaciado interior */
+        font-size: 16px;
+        /* Tamaño del texto */
+        font-weight: bold;
+        /* Negrita */
+        border: none;
+        /* Sin bordes */
+        border-radius: 5px;
+        /* Bordes redondeados */
+        cursor: pointer;
+        /* Cambiar cursor al pasar sobre el botón */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        /* Efecto de transición */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Sombra para darle profundidad */
+
+        &:hover {
+            background-color: #ff002f;
+            /* Cambiar color al pasar el ratón */
+            transform: translateY(-2px);
+            /* Efecto de elevar el botón al hacer hover */
+        }
+
+        &:active {
+            background-color: #cc0020;
+            /* Color más oscuro cuando se hace clic */
+            transform: translateY(1px);
+            /* Efecto de presionar el botón */
+        }
+    }
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #e60023;
+    margin-bottom: 15px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Estilos para la tabla del carrito */
+#cart-table {
+    width: 100%;
+    /* Ancho completo */
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    /* Colapsar bordes */
+    margin: 20px 0;
+    /* Margen superior e inferior */
+}
+
+/* Estilos para los encabezados de la tabla */
+#cart-table thead {
+    background-color: #2b0ae5;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+}
+
+/* Estilos para las celdas de la tabla */
+#cart-table th,
+#cart-table td {
+    border: 2px solid #767474;
+    /* Bordes de las celdas */
+    padding: 10px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Alinear texto al centro */
+    font-size: 20px;
+}
+
+
+#cart-table tr:hover {
+    background-color: #e69e03;
+    /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el total */
+#cart-table tfoot {
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+#cart-table tfoot td {
+    border-top: 2px solid #2706e6;
+    /* Bordes superiores en el pie de la tabla */
+}
+
+.finalizar-compra {
+    background-color: #e60023;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    padding: 12px 24px;
+    /* Espaciado interior */
+    font-size: 16px;
+    /* Tamaño del texto */
+    font-weight: bold;
+    /* Negrita */
+    border: none;
+    /* Sin bordes */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Efecto de transición */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para darle profundidad */
+
+    &:hover {
+        background-color: #ff002f;
+        /* Cambiar color al pasar el ratón */
+        transform: translateY(-2px);
+        /* Efecto de elevar el botón al hacer hover */
+    }
+
+    &:active {
+        background-color: #cc0020;
+        /* Color más oscuro cuando se hace clic */
+        transform: translateY(1px);
+        /* Efecto de presionar el botón */
+    }
+}
+
+.delete {
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in-out;
+    }
+}
